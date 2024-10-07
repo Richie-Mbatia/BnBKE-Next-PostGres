@@ -23,9 +23,9 @@ const fontSans = FontSans({
 // });
 
 export const metadata: Metadata = {
-  title: 'BnBKe Luxurious Affordable Apartments',
+  title: 'SuperBNBs Luxurious Affordable Apartments',
   description:
-    'Discover Luxurious, Affordable and Comfortable staycations/AirBnBs across Kenya with BnBKe',
+    'Discover Luxurious, Affordable and Comfortable staycations/AirBnBs across Kenya with SuperBNBs',
 }
 
 export default function RootLayout({
