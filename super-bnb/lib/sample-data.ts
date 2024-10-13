@@ -1,12 +1,12 @@
 const sampleData = {
-  products: [
+  apartments: [
     {
       name: 'SAFARI RETREAT IN MASAI MARA',
       slug: 'safari-retreat-in-masai-mara',
       category: 'Bed & Breakfast',
       images: ['/assets/images/p1-1.jpg', '/assets/images/p1-2.jpg'],
       price: '5900.00',
-      brand: 'Mike',
+      hostName: 'Mike',
       rating: '4.5',
       numReviews: 10,
       stock: 5,
@@ -21,7 +21,7 @@ const sampleData = {
       category: 'Rooms',
       images: ['/assets/images/p2-1.jpg', '/assets/images/p2-2.jpg'],
       price: '1999.00',
-      brand: 'Susan',
+      hostName: 'Susan',
       rating: '4.2',
       numReviews: 8,
       stock: 10,
@@ -36,7 +36,7 @@ const sampleData = {
       category: 'BeachFront',
       images: ['/assets/images/p3-1.jpg', '/assets/images/p3-2.jpg'],
       price: '1400.00',
-      brand: 'Jane',
+      hostName: 'Jane',
       rating: '4.9',
       numReviews: 3,
       stock: 0,
@@ -49,7 +49,7 @@ const sampleData = {
       category: 'Cabins',
       images: ['/assets/images/p4-1.jpg', '/assets/images/p4-2.jpg'],
       price: '1250.00',
-      brand: 'Drake',
+      hostName: 'Drake',
       rating: '3.6',
       numReviews: 5,
       stock: 10,

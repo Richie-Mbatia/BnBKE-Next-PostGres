@@ -4,6 +4,7 @@ import { drizzle } from 'drizzle-orm/node-postgres'
 import { Client } from 'pg'
 import * as schema from './schema'
 import sampleData from '@/lib/sample-data'
+
 loadEnvConfig(cwd())
 const main = async () => {
   try {
@@ -12,12 +13,12 @@ const main = async () => {
     })
     await client.connect()
     const db = drizzle(client)
-    await db.delete(schema.products)
-    const resProducts = await db
-      .insert(schema.products)
-      .values(sampleData.products)
+    await db.delete(schema.apartments)
+    const resApartments = await db
+      .insert(schema.apartments)
+      .values(sampleData.apartments)
       .returning()
-    console.log({ resProducts })
+    console.log({ resApartments })
     await client.end()
   } catch (error) {
     console.error(error)

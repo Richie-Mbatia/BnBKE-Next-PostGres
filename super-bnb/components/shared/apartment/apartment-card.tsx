@@ -2,35 +2,40 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Star } from 'lucide-react'
+import { Apartment } from '@/types'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const ProductCard = ({ product }: { product: any }) => {
+const ApartmentCard = ({ apartment }: { apartment: Apartment }) => {
   return (
     <Card className="w-full max-w-sm">
       <CardHeader className="p-0 items-center">
-        <Link href={`/product/${product.slug}`}>
+        <Link href={`/apartment/${apartment.slug}`}>
           <Image
-            alt={product.name}
+            alt={apartment.name}
             className="aspect-square object-cover rounded"
             height={300}
-            src={product.images![0]}
+            src={apartment.images![0]}
             width={300}
           />
         </Link>
       </CardHeader>
       <CardContent className="p-4 grid gap-4">
         <div className="grid gap-1.5 text-sm leading-4">
-          <p className="text-sm leading-3">Host: {product.brand}</p>
+          <p className="text-sm leading-3">Host: {apartment.hostName}</p>
         </div>
         <div className="grid gap-1.5 text-sm leading-4">
-          <Link href={`/product/${product.slug}`}>
-            <h2 className="text-sm font-medium">{product.name}</h2>
+          <Link href={`/apartment/${apartment.slug}`}>
+            <h2 className="text-sm font-medium">{apartment.name}</h2>
           </Link>
         </div>
         <div className="flex-between gap-4">
-          <p>{product.rating} stars</p>
-          {product.stock > 0 ? (
-            <p className="font-bold">Ksh{product.price}</p>
+          <p>
+            {apartment.rating}
+            <Star />
+          </p>
+          {apartment.stock > 0 ? (
+            <p className="font-bold">Ksh{apartment.price}</p>
           ) : (
             <p className="text-destructive">Sold Out</p>
           )}
@@ -39,4 +44,4 @@ const ProductCard = ({ product }: { product: any }) => {
     </Card>
   )
 }
-export default ProductCard
+export default ApartmentCard

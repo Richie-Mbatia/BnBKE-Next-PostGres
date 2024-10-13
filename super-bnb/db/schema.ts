@@ -8,16 +8,16 @@ import {
   uniqueIndex,
   uuid,
 } from 'drizzle-orm/pg-core'
-// PRODUCTS
-export const products = pgTable(
-  'product',
+// APARTMENTS SCHEMA DEFINITION
+export const apartments = pgTable(
+  'apartment',
   {
     id: uuid('id').defaultRandom().primaryKey().notNull(),
     name: text('name').notNull(),
     slug: text('slug').notNull(),
     category: text('category').notNull(),
     images: text('images').array().notNull(),
-    brand: text('brand').notNull(),
+    hostName: text('hostName').notNull(),
     description: text('description').notNull(),
     stock: integer('stock').notNull(),
     price: numeric('price', { precision: 12, scale: 2 }).notNull().default('0'),
