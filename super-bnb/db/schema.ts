@@ -31,7 +31,7 @@ export const apartments = pgTable(
   },
   (table) => {
     return {
-      productSlugIdx: uniqueIndex('product_slug_idx').on(table.slug),
+      apartmentSlugIdx: uniqueIndex('apartment_slug_idx').on(table.slug),
     }
   }
 )

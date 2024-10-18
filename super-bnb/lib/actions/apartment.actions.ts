@@ -1,5 +1,5 @@
 'use server'
-import { desc } from 'drizzle-orm'
+import { desc, eq } from 'drizzle-orm'
 import db from '@/db/drizzle'
 import { apartments } from '@/db/schema'
 export async function getLatestApartments() {
@@ -8,4 +8,10 @@ export async function getLatestApartments() {
     limit: 4,
   })
   return data
+}
+
+export async function getApartmentBySlug(slug: string) {
+  return await db.query.apartments.findFirst({
+    where: eq(apartments.slug, slug),
+  })
 }

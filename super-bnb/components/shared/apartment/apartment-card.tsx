@@ -4,6 +4,7 @@ import React from 'react'
 import { Card, CardContent, CardHeader } from '@/components/ui/card'
 import { Star } from 'lucide-react'
 import { Apartment } from '@/types'
+import ApartmentPrice from './apartment-price'
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const ApartmentCard = ({ apartment }: { apartment: Apartment }) => {
@@ -35,7 +36,7 @@ const ApartmentCard = ({ apartment }: { apartment: Apartment }) => {
             <Star />
           </p>
           {apartment.stock > 0 ? (
-            <p className="font-bold">Ksh{apartment.price}</p>
+            <ApartmentPrice value={Number(apartment.price)} />
           ) : (
             <p className="text-destructive">Sold Out</p>
           )}
