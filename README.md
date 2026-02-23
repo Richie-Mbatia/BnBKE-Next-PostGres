@@ -1,2 +1,3 @@
 First commit on super bnb app using next js, shad cn and postgresql
-Youtube tutorial link : Basir ShadCn ecommerce
+Application for finding hotels, airbnbs around your location. 
+
